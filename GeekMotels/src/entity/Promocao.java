@@ -3,17 +3,8 @@ package entity;
 import java.util.Date;
 
 public class Promocao {
-	private Date dataInicio;
 	private Date dataFim;
 	private String descricao;
-	
-	public Date getDataInicio() {
-		return dataInicio;
-	}
-	
-	public void setDataInicio(Date dataInicio) {
-		this.dataInicio = dataInicio;
-	}
 	
 	public Date getDataFim() {
 		return dataFim;

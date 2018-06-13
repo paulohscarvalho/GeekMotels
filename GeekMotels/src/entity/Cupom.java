@@ -7,7 +7,16 @@ public class Cupom {
 	private int numero;
 	private long desconto;
 	private Date validade;
+	private String sequencia;
 	
+	public String getSequencia() {
+		return sequencia;
+	}
+
+	public void setSequencia(String sequencia) {
+		this.sequencia = sequencia;
+	}
+
 	public int getId() {
 		return id;
 	}

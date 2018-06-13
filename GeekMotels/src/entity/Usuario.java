@@ -1,13 +1,14 @@
 package entity;
 
+import java.util.List;
+
 public class Usuario {
 	private int id;
 	private String nome;
 	private String email;
 	private String cpf;
 	private String rg;
-	private int telefone1;
-	private int telefone2;
+	private List<Cupom> cupom;
 	
 	public int getId() {
 		return id;
@@ -48,20 +49,12 @@ public class Usuario {
 		this.rg = rg;
 	}
 	
-	public int getTelefone1() {
-		return telefone1;
+	public List<Cupom> getCupom() {
+		return cupom;
 	}
 	
-	public void setTelefone1(int telefone1) {
-		this.telefone1 = telefone1;
-	}
-	
-	public int getTelefone2() {
-		return telefone2;
-	}
-	
-	public void setTelefone2(int telefone2) {
-		this.telefone2 = telefone2;
+	public void setCupom(List<Cupom> cupom) {
+		this.cupom = cupom;
 	}
 	
 }
