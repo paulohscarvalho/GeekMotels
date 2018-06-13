@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+
+.ui-layout-unit-content {
+	background-image: url("background.png");
+}
+
+#j_idt21-resizer{
+	background-color: black;
+}
+
+#j_idt21{
+	background-color: black;
+}
+
+.ui-widget-content{
+	background-color: black;	
+}
+
+#texto{
+	background-color: #ffffffa1;
+	height: auto;
+}
+
+#texto2{
+	 padding: 10px;
+}
