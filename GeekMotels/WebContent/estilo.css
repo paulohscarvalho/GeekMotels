@@ -16,11 +16,24 @@
 	background-color: black;	
 }
 
-#texto{
+#textoContato{
 	background-color: #ffffffa1;
 	height: auto;
+	width: 600px;
+	border-radius: 2px;
+	
+}
+
+#map{
+	margin-top: -235px;
+	margin-left: 700px;
+	
 }
 
 #texto2{
 	 padding: 10px;
+}
+
+#imgVip{
+	margin-left: 200px;
 }
