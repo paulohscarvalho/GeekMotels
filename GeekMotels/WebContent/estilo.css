@@ -24,6 +24,12 @@
 	
 }
 
+#textoClube{
+	background-color: white;
+	height: auto;
+	border-radius: 2px;
+}
+
 #map{
 	margin-top: -235px;
 	margin-left: 700px;
@@ -37,4 +43,40 @@
 #imgVip{
 	margin-left: 200px;
 }
+
+
+
+/*formatação da página de MENU*/
+
+
+
+.caixa #estrutura #linha #card #img{
+	width: 250px;
+	height: 170px;
+	float: left;
+	padding-right:10px;
+
+}
+
+.caixa #estrutura #linha #card #img img{
+	width: 250px;
+	height: 170px;
+
+}
+
+.caixa #estrutura #linha #card #texto{
+	font-family:'Ubuntu Condensed';
+	font-size: 15px;
+	text-align: justify;
+}
+
+.caixa #estrutura h2{
+	font-family:'Ubuntu Condensed';
+	padding:15px;
+	text-transform: uppercase;
+	text-shadow: 5px 1px 5px #795548;
+}
+
+
+
 

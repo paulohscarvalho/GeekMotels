@@ -1,51 +1,220 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
-    
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
 <h:head>
-    <title>Geek Motels</title>
-    <link href="estilo.css" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"></link>
+	<title>Geek Motels</title>
+	<link href="estilo.css" rel="stylesheet"></link>
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+		crossorigin="anonymous"></link>
+	<link
+		href="https://fonts.googleapis.com/css?family=Cuprum|Dancing+Script|Lobster|Pacifico|Shadows+Into+Light|Ubuntu+Condensed"
+		rel="stylesheet"></link>
+
 </h:head>
 
 
 <h:body>
 
-<hr></hr>
-   <p:layout fullPage="true" style="background: url('background.png') repeat !important;">
-       
-    <p:layoutUnit position="center"  >  
-    
-    <img src="geek.png" width="130px" height="100px" style="position: absolute; padding: 25px;"></img>
-    
-    <div id="nav" style="margin-top:0px; margin-left:250px;">   		
-    	<p:button  outcome ="home" value="Sobre" style="margin-left:40px; margin-top: 60px;"></p:button> 
-		<p:button  outcome = "acomodacoes" value="Acomodações" style="margin-left:40px;"></p:button>
-    	<p:button  outcome = "cardapio" value="Cardápio" style="margin-left:40px"></p:button>
-    	<p:button  outcome = "clubeVIP" value="Clube VIP" style="margin-left:40px" ></p:button>
-    	<p:button  outcome = "contato" value="Contato" style="margin-left:40px" ></p:button>
-    </div>
-   		
-   	<div id="conteudo"> <br> </br>   	
-   		<div id="texto">
-   			<p id="texto2"> CARDAPIO</p>
-   		</div>   
-	</div>   
+	<hr></hr>
+	<p:layout fullPage="true"
+		style="background: url('background.png') repeat !important;">
 
-    </p:layoutUnit>
-     
-     <p:layoutUnit position="south" size="40px" resizable="false" closable="false" collapsible="false">
-     
-    	<i class="fas fa-ticket-alt" style="margin-left:350px; color:white;"></i>
-    	<h:outputText style="margin-left:20px; color:white;" value="Cadastrando-se no Clube VIP você ganha descontos de acordo com suas estadias!" />	
-     
-     </p:layoutUnit>
-     
+		<p:layoutUnit position="center">
 
-  
-   </p:layout>
-        
+			<img src="geek.png" width="130px" height="100px"
+				style="position: absolute; padding: 25px;"></img>
+
+			<div id="nav" style="margin-top: 0px; margin-left: 250px;">
+				<p:button outcome="home" value="Sobre"
+					style="margin-left:40px; margin-top: 60px;"></p:button>
+				<p:button outcome="acomodacoes" value="Acomodações"
+					style="margin-left:40px;"></p:button>
+				<p:button outcome="cardapio" value="Cardápio"
+					style="margin-left:40px"></p:button>
+				<p:button outcome="clubeVIP" value="Clube VIP"
+					style="margin-left:40px"></p:button>
+				<p:button outcome="contato" value="Contato" style="margin-left:40px"></p:button>
+			</div>
+
+
+			<div class="caixa">
+				<div id="estrutura"
+					style="background-color: rgba(239, 235, 233, 0.8); width: 80%; margin: 0px auto;">
+					<h2  style="padding-left: 10px;padding-top: 10px;">Cafés da Manha</h2>
+					<div id="linha" style="margin-bottom: 15px">
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="cafe03.jpg" alt="cafe"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Café Especial + Pão de Queijo</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="cafe04.jpg" alt="imagem do cafe"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Café Especial</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+					</div>
+
+					<hr></hr>
+					<h2  style="padding-left: 10px;padding-top: 10px;">Almoço</h2>
+
+					<div id="linha" style="margin-bottom: 15px">
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="almoco01.jpg" alt="salgado pao de queijo"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Prato 1</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="almoco02.jpg" alt="solgado torta"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Prato 2</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+					</div>
+					<!-- ***************ESTRUTURA DE SUCOS***************** -->
+
+					<hr></hr>
+					<h2  style="padding-left: 10px;padding-top: 10px;">Café da Tarde</h2>
+
+					<div id="linha" style="margin-bottom: 15px">
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="cafe02.jpg" alt="sucos"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Café + Bolo</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="cafe05.jpg" alt="sucos"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Salgado</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+					</div>
+					<hr></hr>
+					<h2  style="padding-left: 10px;padding-top: 10px;">Jantar</h2>
+
+					<!-- ***************ESTRUTURA DE DOCE***************** -->
+					<div id="linha" style="margin-bottom: 15px">
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="janta01.jpg" alt="doces"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Prato 01</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+						<div id="card"
+							style="width: 48%; background-color: #fff; display: inline-block; padding: 5px; box-shadow: 10px 10px 30px #666;">
+							<div id="img"
+								style="width: 250px; height: 170px; float: left; padding-right: 10px;">
+								<img src="janta02.jpg" alt="doces"
+									style="width: 250px; height: 170px" />
+							</div>
+							<div id="texto"
+								style="font-family: 'Ubuntu Condensed'; font-size: 15px; text-align: justify;">
+								<h3>Prato 2</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ipsum dolor quidem libero nihil beatae ducimus facilis esse
+									voluptates repudiandae voluptatum architecto veritatis nostrum
+									in eligendi, quia delectus, maiores magnam natus?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="40px" resizable="false"
+			closable="false" collapsible="false">
+
+			<i class="fas fa-ticket-alt"
+				style="margin-left: 350px; color: white;"></i>
+			<h:outputText style="margin-left:20px; color:white;"
+				value="Cadastrando-se no Clube VIP você ganha descontos de acordo com suas estadias!" />
+
+		</p:layoutUnit>
+
+
+
+	</p:layout>
+
 </h:body>
 </html>
