@@ -13,7 +13,8 @@
 }
 
 .ui-widget-content{
-	background-color: black;	
+	    background-color: rgba(0,0,0,0.25) !important;
+	   
 }
 
 #textoContato{
@@ -25,7 +26,7 @@
 }
 
 #textoClube{
-	background-color: white;
+	background-color: rgba(0,0,0,0.25) !important;
 	height: auto;
 	border-radius: 2px;
 }
@@ -45,29 +46,8 @@
 }
 
 
-
-/*formatação da página de MENU*/
-
-
-
-.caixa #estrutura #linha #card #img{
-	width: 250px;
-	height: 170px;
-	float: left;
-	padding-right:10px;
-
-}
-
-.caixa #estrutura #linha #card #img img{
-	width: 250px;
-	height: 170px;
-
-}
-
 .caixa #estrutura #linha #card #texto{
-	font-family:'Ubuntu Condensed';
-	font-size: 15px;
-	text-align: justify;
+	font-family:'Ubuntu Condensed';	font-size: 15px;text-align: justify;
 }
 
 .caixa #estrutura h2{
@@ -77,6 +57,14 @@
 	text-shadow: 5px 1px 5px #795548;
 }
 
+#j_idt23{
+	margin-left: 650px;
+    margin-top: 10px;
+}
 
+#j_idt22{
+	margin-left: 540px;
+	margin-top:5px;
+}
 
 

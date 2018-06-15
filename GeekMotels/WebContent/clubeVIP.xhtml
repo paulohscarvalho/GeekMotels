@@ -39,11 +39,31 @@
 
 			<div id="conteudo">
 				<br> </br>
-				<div id="textoClube"
-					style="background-color: white; width: 700px; margin-left: 320px">
-					<p id="texto2">Cadastre-se e receba desconto em sua PRIMEIRA
-						estadia!</p>
-				
+				<div id="textoClube">
+					<h2 style="text-align: center; color: white;">Cadastrando-se você obtem um cupom de desconto para sua PRIMEIRA estadia em nosso motel!</h2>
+					<h:form style="margin-left: 540px; border-radius: 3px;">
+						<p:messages id="messages" />
+						<p:panelGrid columns="2" >
+					
+							<p:outputLabel for="nome" value="Nome:" style="color: white;" />
+							<p:inputText id="nome" value="#{ClienteMB.cliente.nome}" />
+
+
+							<p:outputLabel for="telefone" value="Telefone:" style="color: white;" />
+							<p:inputText id="telefone" value="#{ClienteMB.cliente.telefone}" />
+
+							<p:outputLabel for="email" value="Email:" style="color: white;"/>
+							<p:inputText id="email" value="#{ClienteMB.cliente.email}" />
+
+							<p:outputLabel for="cpf" value="CPF:" style="color: white;" />
+							<p:inputText id="cpf" value="#{ClienteMB.cliente.cpf}" />
+
+						</p:panelGrid>
+
+					</h:form>
+					<p:commandButton value="Enviar" icon="ui-icon-star"
+						action="#{ClienteMB.cadastrarCliente}">
+					</p:commandButton>
 				</div>
 			</div>
 
