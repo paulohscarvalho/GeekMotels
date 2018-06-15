@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Geek Motels</title>
+	<link href="estilo.css" rel="stylesheet"></link>
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+		crossorigin="anonymous"></link>
+</h:head>
+
+
+<h:body>
+
+	<hr></hr>
+	<p:layout fullPage="true"
+		style="background: url('background.png') repeat !important;">
+
+		<p:layoutUnit position="center">
+
+			<img src="geek.png" width="130px" height="100px"
+				style="position: absolute; padding: 25px;"></img>
+
+			<div id="nav" style="margin-top: 0px; margin-left: 250px;">
+				<p:button outcome="home" value="Sobre"
+					style="margin-left:40px; margin-top: 60px;"></p:button>
+				<p:button outcome="acomodacoes" value="Acomodações"
+					style="margin-left:40px;"></p:button>
+				<p:button outcome="cardapio" value="Cardápio"
+					style="margin-left:40px"></p:button>
+				<p:button outcome="clubeVIP" value="Clube VIP"
+					style="margin-left:40px"></p:button>
+				<p:button outcome="contato" value="Contato" style="margin-left:40px"></p:button>
+			</div>
+
+			<div id="conteudo">
+				<br> </br>
+					<h:form>
+						<p:growl id="msgs" showDetail="true" />
+
+						<p:fieldset legend="Sobre o Geek Motels" >
+							<h:panelGrid columns="2" cellpadding="5" style="background-color: #ffffffa1;">
+							<img src="hotel.jpg" style="width: 400px; height: 320px;"></img>
+							<p>	<h:outputText 
+									value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
+                His beloved son Michael has just come home from the war, but does not intend to become part of his father's business.
+                Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect,
+                but given to ruthless violence whenever anything stands against the good of the family." /> </p>
+							</h:panelGrid>
+						</p:fieldset>
+					</h:form>
+				</div>
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="40px" resizable="false"
+			closable="false" collapsible="false">
+
+			<i class="fas fa-ticket-alt"
+				style="margin-left: 350px; color: white;"></i>
+			<h:outputText style="margin-left:20px; color:white;"
+				value="Cadastrando-se no Clube VIP você ganha descontos de acordo com suas estadias!" />
+
+		</p:layoutUnit>
+
+
+
+	</p:layout>
+
+</h:body>
+</html>
