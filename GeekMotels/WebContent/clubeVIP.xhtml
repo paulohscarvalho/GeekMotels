@@ -11,77 +11,68 @@
 		href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
 		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 		crossorigin="anonymous"></link>
+	<link
+		href="https://fonts.googleapis.com/css?family=Cuprum|Dancing+Script|Lobster|Pacifico|Shadows+Into+Light|Ubuntu+Condensed"
+		rel="stylesheet"></link>
 </h:head>
 
-
 <h:body>
-
 	<hr></hr>
 	<p:layout fullPage="true"
 		style="background: url('background.png') repeat !important;">
-
 		<p:layoutUnit position="center">
-
 			<img src="geek.png" width="130px" height="100px"
 				style="position: absolute; padding: 25px;"></img>
-
 			<div id="nav" style="margin-top: 0px; margin-left: 250px;">
 				<p:button outcome="home" value="Sobre"
-					style="margin-left:40px; margin-top: 60px;"></p:button>
-				<p:button outcome="acomodacoes" value="Acomodações"
-					style="margin-left:40px;"></p:button>
+					style="margin-left:40px; margin-top: 60px; font-family: 'Ubuntu Condensed'; font-size: 15px;"></p:button>
+				<p:button outcome="acomodacoes" value="Acomodações; "
+					style="margin-left:40px; font-family: 'Ubuntu Condensed'; font-size: 15px;"></p:button>
 				<p:button outcome="cardapio" value="Cardápio"
-					style="margin-left:40px"></p:button>
+					style="margin-left:40px; font-family: 'Ubuntu Condensed'; font-size: 15px;"></p:button>
 				<p:button outcome="clubeVIP" value="Clube VIP"
-					style="margin-left:40px"></p:button>
-				<p:button outcome="contato" value="Contato" style="margin-left:40px"></p:button>
+					style="margin-left:40px;font-family: 'Ubuntu Condensed'; font-size: 15px;"></p:button>
+				<p:button outcome="contato" value="Contato" 
+					style="margin-left:40px; font-family: 'Ubuntu Condensed'; font-size: 15px;"></p:button>
 			</div>
 
 			<div id="conteudo">
 				<br> </br>
 				<div id="textoClube">
-					<h2 style="text-align: center; color: white;">Cadastrando-se você obtem um cupom de desconto para sua PRIMEIRA estadia em nosso motel!</h2>
+					<h2 style="text-align: center; color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;">Cadastrando-se você obtem um cupom de desconto para sua PRIMEIRA estadia em nosso motel!</h2>
 					<h:form style="margin-left: 540px; border-radius: 3px;">
 						<p:messages id="messages" />
 						<p:panelGrid columns="2" >
 					
-							<p:outputLabel for="nome" value="Nome:" style="color: white;" />
+							<p:outputLabel for="nome" value="Nome:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
 							<p:inputText id="nome" value="#{ClienteMB.cliente.nome}" />
 
 
-							<p:outputLabel for="telefone" value="Telefone:" style="color: white;" />
+							<p:outputLabel for="telefone" value="Telefone:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
 							<p:inputText id="telefone" value="#{ClienteMB.cliente.telefone}" />
 
-							<p:outputLabel for="email" value="Email:" style="color: white;"/>
+							<p:outputLabel for="email" value="Email:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;"/>
 							<p:inputText id="email" value="#{ClienteMB.cliente.email}" />
 
-							<p:outputLabel for="cpf" value="CPF:" style="color: white;" />
+							<p:outputLabel for="cpf" value="CPF:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
 							<p:inputText id="cpf" value="#{ClienteMB.cliente.cpf}" />
 
 						</p:panelGrid>
-
 					</h:form>
-					<p:commandButton value="Enviar" icon="ui-icon-star"
+					<p:commandButton value="Enviar" icon="ui-icon-star" style="font-family: 'Ubuntu Condensed'; font-size: 15px;"
 						action="#{ClienteMB.cadastrarCliente}">
 					</p:commandButton>
 				</div>
 			</div>
-
 		</p:layoutUnit>
 
 		<p:layoutUnit position="south" size="40px" resizable="false"
 			closable="false" collapsible="false">
-
 			<i class="fas fa-ticket-alt"
 				style="margin-left: 350px; color: white;"></i>
-			<h:outputText style="margin-left:20px; color:white;"
+			<h:outputText style="margin-left:20px; color:white; font-family: 'Ubuntu Condensed'; font-size: 15px;"
 				value="Cadastrando-se no Clube VIP você ganha descontos de acordo com suas estadias!" />
-
 		</p:layoutUnit>
-
-
-
 	</p:layout>
-
 </h:body>
 </html>
