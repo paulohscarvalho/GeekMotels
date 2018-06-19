@@ -50,7 +50,7 @@ public class Connection {
 
         	 PreparedStatement preparedStatement = (PreparedStatement) ((java.sql.Connection) conexao)
                      .prepareStatement("insert into Cliente (id, nome, telefone, email,cpf) values(?,?,?,?,?)");
-              preparedStatement.setInt(1, cliente.getId());
+              preparedStatement.setLong(1, cliente.getId());
               preparedStatement.setString(2, cliente.getNome());
               preparedStatement.setString(3, cliente.getTelefone());
               preparedStatement.setString(4, cliente.getEmail());
