@@ -1,6 +1,2 @@
-/boundary/
-/view/
 /dao/
-/entity/
-/model/
-/controller/
+/javax/
