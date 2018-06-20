@@ -6,8 +6,8 @@
 	<display-name>GeekMotelsProject</display-name>
 
 	<welcome-file-list>
+		<welcome-file>home.xhtml</welcome-file>
 		<welcome-file>home.jsf</welcome-file>
-
 	</welcome-file-list>
 
  	<error-page>
@@ -24,6 +24,6 @@
 
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.jsf</url-pattern>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 </web-app>

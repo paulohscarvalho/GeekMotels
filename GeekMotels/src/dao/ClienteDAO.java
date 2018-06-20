@@ -10,6 +10,5 @@ public interface ClienteDAO {
 	public void inserir(Cliente cliente) throws SQLException;
 	public void remover(long id) throws SQLException;
 	public void atualizar(long id, Cliente cliente) throws SQLException;
-	public List<Cliente> pesquisarPorNome(String nome) throws SQLException;
-	public List<Cliente> pesquisarTodos() throws SQLException;
-}
+	public List<Cliente> pesquisar(String nome) throws SQLException;
+	}

@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -11,70 +12,53 @@ import javax.persistence.TypedQuery;
 import model.Cliente;
 
 public class ClienteDAOImplementation implements ClienteDAO {
-	
-	private static EntityManagerFactory emf;
-	
-	public ClienteDAOImplementation() {
-		if ( emf == null ){ 
-			emf = Persistence.createEntityManagerFactory("GEEKMOTELS");
-		}
-	}
-	
 
 	@Override
 	public void inserir(Cliente cliente) throws SQLException {
-		EntityManager em = emf.createEntityManager();
+		EntityManager em = JPAUtil.getEMF().createEntityManager();
 		em.getTransaction().begin();
 		em.persist(cliente);
 		em.getTransaction().commit();
-		em.close();	
+		em.close();
 	}
 
 	@Override
 	public void remover(long id) throws SQLException {
-		EntityManager em = emf.createEntityManager();
+		EntityManager em = JPAUtil.getEMF().createEntityManager();
 		Cliente cliente = em.getReference(Cliente.class, id);
-		em.getTransaction().begin();
-		em.remove(cliente);
-		em.getTransaction().commit();
+		if (cliente != null) {
+			em.getTransaction().begin();
+			em.remove(cliente);
+			em.getTransaction().commit();
+		}
 		em.close();
 	}
 
 	@Override
 	public void atualizar(long id, Cliente cliente) throws SQLException {
-		EntityManager em = emf.createEntityManager();
+		EntityManager em = JPAUtil.getEMF().createEntityManager();
 		Cliente clienteAntigo = em.getReference(Cliente.class, id);
-		em.getTransaction().begin();
-		clienteAntigo.setNome( cliente.getNome() );
-		clienteAntigo.setTelefone( cliente.getTelefone() );
-		clienteAntigo.setEmail( cliente.getEmail() );
-		clienteAntigo.setCpf( cliente.getCpf() );
-		em.getTransaction().commit();
+		if (clienteAntigo != null) { 
+			em.getTransaction().begin();
+			clienteAntigo.setNome( cliente.getNome() );
+			clienteAntigo.setTelefone( cliente.getTelefone() );
+			clienteAntigo.setEmail( cliente.getEmail() );
+			clienteAntigo.setCpf( cliente.getCpf() );
+			em.getTransaction().commit();
+		}
 		em.close();
 	}
 
 	@Override
-	public List<Cliente> pesquisarPorNome(String nome) throws SQLException {
-		List<Cliente> clientes = null;
-		EntityManager em = emf.createEntityManager();
-		TypedQuery<Cliente> qry = em.createNamedQuery(
-				"select cli from Cliente cli where cli.nome like :nome", 
-				Cliente.class);
-		qry.setParameter("nome", nome);
-		clientes = qry.getResultList();
-		return clientes;
+	public List<Cliente> pesquisar(String nome) throws SQLException {
+		EntityManager em = JPAUtil.getEMF().createEntityManager();
+		TypedQuery<Cliente> qry = 
+				em.createQuery("select cliente from Cliente cliente where nome like :n", Cliente.class);
+		qry.setParameter("n", "%" + nome + "%");
+		List<Cliente> produtos = new ArrayList<Cliente>();
+		produtos.addAll( qry.getResultList() ); 
+		em.close();
+		return produtos;
 	}
-
-	@Override
-	public List<Cliente> pesquisarTodos() throws SQLException {
-		List<Cliente> clientes = null;
-		EntityManager em = emf.createEntityManager();
-		TypedQuery<Cliente> qry = em.createNamedQuery(
-				"select cli from Cliente cli", 
-				Cliente.class);
-		clientes = qry.getResultList();
-		return clientes;
-	}
-	
 
 }

@@ -9,12 +9,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Cliente implements Serializable {
+	private static final long serialVersionUID = -8914597399554711634L;
 	
 	private long id;
 	private String nome;
 	private String telefone;
 	private String email;
 	private String cpf;
+	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

@@ -1,29 +1,44 @@
-package controller;
 
 import java.io.Serializable;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 import dao.ClienteDAO;
 import dao.ClienteDAOImplementation;
 import model.Cliente;
 
-@ManagedBean(name="ClienteMB")
+
+
+@ManagedBean
+@SessionScoped
 public class ClienteManagedBean implements Serializable {
+
+	private static final long serialVersionUID = -3304202810037758438L;
 	
 	private Cliente clienteAtual;
-	private ClienteDAO cliDao;
+	private ClienteDAO cliDAO;
+	private List<Cliente> clientes;
 	
 	public ClienteManagedBean() { 
-		setClienteAtual(new Cliente());
-		cliDao = new ClienteDAOImplementation();
+		clienteAtual = new Cliente();
+		setClientes(new ArrayList<Cliente>());
+		cliDAO = new ClienteDAOImplementation();
+		
 	}
 	
-	public String inserir() {
+	public String inserir() { 
 		try {
-			cliDao.inserir( clienteAtual );
+			cliDAO.inserir( clienteAtual );
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,9 +46,14 @@ public class ClienteManagedBean implements Serializable {
 		return "";
 	}
 	
-	public String remover() { 
+	public String carregar(Cliente cliente) { 
+		clienteAtual = cliente;
+		return "";		
+	}
+	
+	public String atualizar() {
 		try {
-			cliDao.remover( clienteAtual.getId() );
+			cliDAO.atualizar( clienteAtual.getId(), clienteAtual );
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,22 +61,20 @@ public class ClienteManagedBean implements Serializable {
 		return "";
 	}
 	
-	public String atualizar() { 
+	public String remover(Cliente cliente) { 
 		try {
-			cliDao.atualizar( clienteAtual.getId(), clienteAtual );
+			cliDAO.remover( cliente.getId() );
+			pesquisar();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}		
 		return "";
 	}
 	
 	public String pesquisar() { 
 		try {
-			List<Cliente> clientes = cliDao.pesquisarPorNome( clienteAtual.getNome() );
-			for (Cliente cliente : clientes) { 
-				System.out.println("Nome : " + cliente.getNome());
-			}
+			clientes = cliDAO.pesquisar( clienteAtual.getNome() );
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -64,14 +82,30 @@ public class ClienteManagedBean implements Serializable {
 		return "";
 	}
 	
+	public String pesquisarTodos() { 
+		try {
+			clientes = cliDAO.pesquisar( "" );
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
+	}
 
 	public Cliente getClienteAtual() {
 		return clienteAtual;
 	}
 
-	public void setClienteAtual(Cliente clienteAtual) {
+	public void setClienteAtual(Cliente cliente) {
 		this.clienteAtual = clienteAtual;
 	}
 
-}
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
 
+	public void setClientes(List<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+}
