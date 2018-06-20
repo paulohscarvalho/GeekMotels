@@ -45,22 +45,22 @@
 						<p:panelGrid columns="2" >
 					
 							<p:outputLabel for="nome" value="Nome:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
-							<p:inputText id="nome" value="${ClienteMB.cliente.nome}" />
+							<p:inputText id="nome" value="${ClienteManagedBean.cliente.nome}" />
 
 
 							<p:outputLabel for="telefone" value="Telefone:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
-							<p:inputText id="telefone" value="${ClienteMB.cliente.telefone}" />
+							<p:inputText id="telefone" value="${ClienteManagedBean.cliente.telefone}" />
 
 							<p:outputLabel for="email" value="Email:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;"/>
-							<p:inputText id="email" value="${ClienteMB.cliente.email}" />
+							<p:inputText id="email" value="${ClienteManagedBean.cliente.email}" />
 
 							<p:outputLabel for="cpf" value="CPF:" style="color: white; font-family: 'Ubuntu Condensed'; font-size: 15px;" />
-							<p:inputText id="cpf" value="${ClienteMB.cliente.cpf}" />
+							<p:inputText id="cpf" value="${ClienteManagedBean.cliente.cpf}" />
 
 						</p:panelGrid>
 					</h:form>
 					<p:commandButton value="Enviar" name= "cmd" icon="ui-icon-star" style="font-family: 'Ubuntu Condensed'; font-size: 15px;"
-						action="${ClienteMB.inserir()}">
+						action="${ClienteManagedBean.inserir()}">
 					</p:commandButton>
 				</div>
 			</div>

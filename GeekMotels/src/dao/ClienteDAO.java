@@ -11,4 +11,5 @@ public interface ClienteDAO {
 	public void remover(long id) throws SQLException;
 	public void atualizar(long id, Cliente cliente) throws SQLException;
 	public List<Cliente> pesquisar(String nome) throws SQLException;
-	}
+	
+}

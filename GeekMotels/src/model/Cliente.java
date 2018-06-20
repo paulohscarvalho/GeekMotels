@@ -30,8 +30,11 @@ public class Cliente implements Serializable {
 	
 	@Column
 	public String getNome() {
+		System.out.println(nome);
 		return nome;
 	}
+	
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
